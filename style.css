@@ -50,7 +50,7 @@
   color: #979797;
   font-weight: bolder;
 }
-.api-list {
+#api-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
