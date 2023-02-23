@@ -3,6 +3,7 @@ const apiName = document.getElementById("api-name");
 const apiEmail = document.getElementById("api-email");
 const numOfBoxes = document.getElementById("cargo-input");
 const list = document.getElementById("api-list-ul");
+let compNameslist = [];
 
 function dataFetch() {
   return fetch(
@@ -18,9 +19,9 @@ function dataFetch() {
 
 async function init() {
   const compInfos = await dataFetch();
-  apiList = compInfos.map((item) => {
+  compNameslist = compInfos.map((item) => {
     const compNamesItem = document.createElement("li");
-    compNamesItem.innerText = item.name;
+    compNamesItem.textContent = item.name;
     console.log(item.boxes);
     compNamesItem.addEventListener("click", () => {
       apiName.textContent = item.name;
@@ -29,7 +30,7 @@ async function init() {
     });
     return compNamesItem;
   });
-  list.append(...apiList);
+  list.append(...compNameslist);
 }
 
 init();
