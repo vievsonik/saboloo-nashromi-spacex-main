@@ -11,7 +11,6 @@ function dataFetch() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       return data;
     })
     .catch((err) => console.error(err));
@@ -21,8 +20,8 @@ async function init() {
   const compInfos = await dataFetch();
   compNameslist = compInfos.map((item) => {
     const compNamesItem = document.createElement("li");
-    compNamesItem.textContent = item.name;
-    console.log(item.boxes);
+    compNamesItem.id = "li-style";
+    compNamesItem.innerText = item.name;
     compNamesItem.addEventListener("click", () => {
       apiName.textContent = item.name;
       apiEmail.textContent = item.email;

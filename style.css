@@ -65,7 +65,15 @@
   height: 100%;
   overflow: auto;
 }
-.p-class {
+/* .p-class {
+  color: #979797;
+  cursor: pointer;
+  margin-top: 55px;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+} */
+#li-style {
   color: #979797;
   cursor: pointer;
   margin-top: 55px;
@@ -73,7 +81,7 @@
   -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
-.p-class:hover {
+#li-style:hover {
   color: #fff;
   background: -webkit-gradient(
     linear,
