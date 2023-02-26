@@ -1,0 +1,25 @@
+@media (max-width: 970px) {
+  /* .left-container-box {
+  } */
+  .container-flex {
+    flex-direction: column;
+  }
+  #api-name {
+    font-size: 25px;
+  }
+  .left-container-box {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  #cargo-input {
+    width: 290px;
+  }
+  .input-class-1 {
+    padding-left: 3px;
+  }
+  .right-cargo-indicator {
+    width: 300px;
+    justify-content: center;
+    align-self: center;
+  }
+}
