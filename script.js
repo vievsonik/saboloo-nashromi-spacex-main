@@ -29,14 +29,27 @@ async function init() {
       apiEmail.textContent = item.email;
       count(numOfBoxes.value).then((res) => (cargosNeeded.innerText = res));
     });
+    numOfBoxes.addEventListener("input", () => {
+      count(numOfBoxes.value).then((res) => (cargosNeeded.innerText = res));
+    });
     return apiCompanyNamesList;
+    async function count(set) {
+      let key = await set.split(",").map((element) => {
+        return Number(element);
+      });
+      let count = 0;
+      key.forEach((el) => {
+        count += el;
+      });
+      return count % 10 === 0 ? count / 10 : Math.ceil(count / 10);
+    }
   });
   navigationUl.append(...apiNamesLi);
 }
 init();
 
 async function count(set) {
-  let key = await set.split(",").map(element => {
+  let key = await set.split(",").map((element) => {
     return Number(element);
   });
   let count = 0;
@@ -45,4 +58,3 @@ async function count(set) {
   });
   return count % 10 === 0 ? count / 10 : Math.ceil(count / 10);
 }
-
