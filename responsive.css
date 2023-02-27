@@ -1,6 +1,9 @@
+/* @media (max-width: 975px) {
+  #left-container-box {
+    display: flex;
+  }
+} */
 @media (max-width: 970px) {
-  /* .left-container-box {
-  } */
   .container-flex {
     flex-direction: column;
   }
