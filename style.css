@@ -12,7 +12,7 @@
   width: 100%;
   margin: 0 auto;
 }
-.left-container-box {
+#left-container-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,6 +63,10 @@
 .fa-solid {
   color: #fff;
   font-size: 30px;
+  transition: all ease-in-out 0.2s;
+}
+.fa-solid:hover {
+  font-size: 34px;
 }
 #li-style {
   color: #979797;
