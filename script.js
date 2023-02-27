@@ -35,7 +35,6 @@ async function init() {
       count(numOfBoxes.value).then((res) => (cargosNeeded.innerText = res));
     });
     hamburgerMenu.addEventListener("click", hamburgerToggle);
-
     return apiCompanyNamesList;
     async function count(set) {
       let key = await set.split(",").map((element) => {
