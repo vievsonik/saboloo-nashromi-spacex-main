@@ -1,10 +1,6 @@
 .body {
   background-color: #5f6472;
 }
-
-.header-title {
-  margin-top: 27px;
-}
 .title-logo-class {
   width: 250px;
   cursor: pointer;
@@ -55,6 +51,18 @@
   max-height: 390px;
   height: 100%;
   overflow: auto;
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 27px;
+}
+#hamburger-menu {
+  display: none;
+}
+.fa-solid {
+  color: #fff;
+  font-size: 30px;
 }
 #li-style {
   color: #979797;

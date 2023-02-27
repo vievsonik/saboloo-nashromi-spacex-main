@@ -4,6 +4,7 @@ const apiEmail = document.getElementById("api-email");
 const numOfBoxes = document.getElementById("cargo-input");
 const navigationUl = document.getElementById("api-list-ul");
 const cargosNeeded = document.getElementById("cargos");
+const hamburgerMenu = document.getElementById("hamburger-menu");
 const apiLink =
   "https://bitbucket.org/hpstore/spacex-cargo-planner/raw/204125d74487b1423bbf0453f4dcb53a2161353b/shipments.json";
 
@@ -32,6 +33,7 @@ async function init() {
     numOfBoxes.addEventListener("input", () => {
       count(numOfBoxes.value).then((res) => (cargosNeeded.innerText = res));
     });
+    hamburgerMenu.addEventListener("click", () => {});
     return apiCompanyNamesList;
     async function count(set) {
       let key = await set.split(",").map((element) => {
@@ -47,14 +49,3 @@ async function init() {
   navigationUl.append(...apiNamesLi);
 }
 init();
-
-async function count(set) {
-  let key = await set.split(",").map((element) => {
-    return Number(element);
-  });
-  let count = 0;
-  key.forEach((el) => {
-    count += el;
-  });
-  return count % 10 === 0 ? count / 10 : Math.ceil(count / 10);
-}

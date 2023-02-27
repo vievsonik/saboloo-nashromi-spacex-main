@@ -7,9 +7,34 @@
   #api-name {
     font-size: 25px;
   }
+  #hamburger-menu {
+    display: flex;
+    cursor: pointer;
+  }
+  #api-list {
+    max-height: 190px;
+    height: 100%;
+    max-width: 500px;
+    width: 100%;
+  }
   .left-container-box {
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .header-flex {
+    padding: 0 15px 0 15px;
+  }
+  #api-name {
+    padding-left: 0;
+    padding-top: 15px;
+  }
+  #api-email {
+    padding-left: 0;
+    font-size: 14px;
+  }
+  #requaierd-cargos {
+    font-size: 1.7rem;
   }
   #cargo-input {
     width: 290px;
@@ -21,5 +46,10 @@
     width: 300px;
     justify-content: center;
     align-self: center;
+  }
+}
+@media (max-width: 412px) {
+  .right-cargo-indicator {
+    margin-left: 0;
   }
 }
