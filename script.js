@@ -50,7 +50,6 @@ async function init() {
   navigationUl.append(...apiNamesLi);
 }
 init();
-
 function hide() {
   hamburgerToggle();
 }
