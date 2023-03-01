@@ -58,7 +58,11 @@
   background-color: red;
 }
 .header-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 27px;
 }
@@ -68,6 +72,8 @@
 .fa-solid {
   color: #fff;
   font-size: 30px;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 .fa-solid:hover {
@@ -84,6 +90,11 @@
 
 #li-style:hover {
   color: #fff;
+  background: -o-linear-gradient(
+    left,
+    rgba(45, 48, 56, 0) 22.92%,
+    #2d3038 100%
+  );
   background: -webkit-gradient(
     linear,
     left top,
@@ -124,6 +135,11 @@
 .right-cargo-indicator {
   width: 700px;
   height: 500px;
+  background: -o-linear-gradient(
+    left,
+    rgba(45, 48, 56, 4) 22.92%,
+    #2d3038 100%
+  );
   background: -webkit-gradient(
     linear,
     left top,
