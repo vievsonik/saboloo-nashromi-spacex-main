@@ -6,6 +6,7 @@ const navigationUl = document.getElementById("api-list-ul");
 const cargosNeeded = document.getElementById("cargos");
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const responsiveApiList = document.querySelector("#left-container-box");
+const rightCargo = document.querySelector(".right-cargo-indicator");
 const apiLink =
   "https://bitbucket.org/hpstore/spacex-cargo-planner/raw/204125d74487b1423bbf0453f4dcb53a2161353b/shipments.json";
 
@@ -55,9 +56,9 @@ function hide() {
 }
 function hamburgerToggle() {
   let x = responsiveApiList;
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
+  if (x.style.display === "flex") {
     x.style.display = "none";
+  } else {
+    x.style.display = "flex";
   }
 }

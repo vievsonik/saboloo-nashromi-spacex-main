@@ -12,6 +12,8 @@
   }
   #hamburger-menu {
     display: flex;
+  }
+  .fa-solid {
     cursor: pointer;
   }
   #api-list {
@@ -51,6 +53,7 @@
   }
   .right-cargo-indicator {
     width: 300px;
+    height: 450px;
     justify-content: center;
     align-self: center;
     margin-bottom: 90px;
